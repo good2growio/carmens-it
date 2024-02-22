@@ -1,0 +1,40 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+      }
+    },
+    "1645781199175bfd4a": {
+      "type": "advanced-content",
+      "blocks": {
+        "1645781199e82fda33-1": {
+          "type": "liquid",
+          "settings": {
+            "code": "<h1><strong>Coming Soon...<\/strong><\/h1>",
+            "width": "100%",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "primary",
+            "button_background_color": "",
+            "button_color_text": "",
+            "alignment": "center"
+          }
+        }
+      },
+      "block_order": [
+        "1645781199e82fda33-1"
+      ],
+      "settings": {
+        "background_color": "#ffffff",
+        "full_width": false,
+        "space_around": true
+      }
+    }
+  },
+  "order": [
+    "main",
+    "1645781199175bfd4a"
+  ]
+}

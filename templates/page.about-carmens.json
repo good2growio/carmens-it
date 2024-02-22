@@ -1,0 +1,92 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+      }
+    },
+    "16468481572b280072": {
+      "type": "rich-text",
+      "blocks": {
+        "16468481574a459eb3-0": {
+          "type": "heading",
+          "settings": {
+            "title": "About"
+          }
+        }
+      },
+      "block_order": [
+        "16468481574a459eb3-0"
+      ],
+      "settings": {
+        "custom_class": "",
+        "align_text": "center",
+        "narrow_column": true,
+        "divider": false
+      }
+    },
+    "1646849395d0c28a62": {
+      "type": "hero-video",
+      "disabled": true,
+      "settings": {
+        "title": "",
+        "title_size": 80,
+        "subheading": "",
+        "link_text": "",
+        "link": "",
+        "color_accent": "rgba(0,0,0,0)",
+        "text_align": "vertical-center horizontal-center",
+        "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/6c6ac1a1bdd14ed1becead974ad5df27.mp4",
+        "overlay_opacity": 0,
+        "section_height": "450px",
+        "mobile_height": "300px"
+      }
+    },
+    "d26ad3f1-f2ac-4494-81d1-5ee137d4052c": {
+      "type": "background-image-text",
+      "settings": {
+        "narrow_column": true,
+        "space_around": true,
+        "subtitle": "",
+        "title": "",
+        "text": "",
+        "button_label": "",
+        "button_link": "",
+        "image": "shopify:\/\/shop_images\/IMMAGINE_HOME_HERO_SLIDE_DESKTOP.jpg",
+        "focal_point": "center",
+        "layout": "left",
+        "height": 650,
+        "framed": false,
+        "parallax": false
+      }
+    },
+    "16468490775d160325": {
+      "type": "rich-text",
+      "blocks": {
+        "74f04c6e-eb23-4321-9754-64e3072eb802": {
+          "type": "page",
+          "settings": {
+            "page_text": "about"
+          }
+        }
+      },
+      "block_order": [
+        "74f04c6e-eb23-4321-9754-64e3072eb802"
+      ],
+      "settings": {
+        "custom_class": "",
+        "align_text": "center",
+        "narrow_column": true,
+        "divider": false
+      }
+    }
+  },
+  "order": [
+    "main",
+    "16468481572b280072",
+    "1646849395d0c28a62",
+    "d26ad3f1-f2ac-4494-81d1-5ee137d4052c",
+    "16468490775d160325"
+  ]
+}

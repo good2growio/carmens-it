@@ -1,0 +1,228 @@
+{%- assign swatch_file_extension = 'png' -%}
+ 
+<!-- The Modal -->
+<div id="sizeModal" class="modal">
+  <!-- Modal content -->
+  <div class="modal-content">
+   
+    <span class="close">&times;</span>
+    <div class="modal-text">
+      <h3>{{section.settings.title}}</h3>
+      <p>{{section.settings.text}}</p>
+    </div>
+ <img src="{{section.settings.image |img_url:'master'}}"/>  </div>
+
+</div>
+<div class="variant-wrapper js" data-type="button">
+  <label data-image="{{ option.image.src }}" class="variant__label{% if option.name == 'Default' or option.name == 'Title' or option.name == "Materiale" %} hidden-label{% endif %}{% unless variant_labels %} hidden-label{% endunless %}"
+    for="ProductSelect-{{ section_id }}-{{ product.id }}-option-{{ forloop.index0 }}">
+    {{ option.name }}
+    {%- if is_color -%}
+      <span class="variant__label-info">
+        &mdash;
+        <span
+          data-variant-color-label
+          data-index="{{ forloop.index0 }}"
+          data-option-index="{{ color_option_index }}">
+          {{ option.selected_value }}
+        </span>
+      </span>
+    {%- endif -%}
+     {%-if option.name =='Taglia' or option.name =='Size' -%}
+      {% comment %} {%- for variant in product.variants -%}
+        {%- if variant.title contains value -%}
+          {%- liquid
+            assign product_available = true
+            if product.options.size == 1
+              assign product_available = product.variants[forloop.index0].available
+            endif
+          -%}
+        {%- else -%}
+        {%- liquid
+          assign product_available = false
+          if product.options.size == 1
+            assign product_available = product.variants[forloop.index0].available
+          endif
+        -%}
+        {%- endif -%}
+      {%- endfor -%}  {% endcomment %}
+
+      {% assign current_variant = product.selected_or_first_available_variant %}
+      {% assign variants_list_sum_average = 0 %}
+        <div class="variant-limited-wrapper {% if variants_list_sum_average == 0 and variants_list_sum_average > 1 %} hide{% endif %}{% if current_variant.inventory_quantity <= 0 %} hide{% endif %}">
+        {% assign variants_list = '' %}
+        {% assign variants_list_sum = 0 %}
+    
+        {%- for variant in product.variants -%}
+          {% assign cstm_variants =  variant.title | split: "/" %}
+          {%assign styleVariant = '' %}
+          {% assign filterCol = cstm_variants[1] | handleize | replace :'-','' | replace :' ','' %}
+          {%assign filterMat = cstm_variants[0] | split:'(' | first | handleize | replace :'-','' | replace :' ','' %}
+          {%assign filterSize = cstm_variants[2] | handleize | replace :'-','' | replace :' ','' %}
+    
+          {% for variants2 in product.variants %}
+            {% if variants2.title contains cstm_variants[1] %}               
+              {% if variants2.title contains cstm_variants[0] %}                  
+                {% assign variants_list = variants_list | append: variants2.inventory_quantity %}
+                {% assign variants_list_sum = variants_list_sum | plus: variants2.inventory_quantity %}
+              {% endif %}                
+            {% endif %}
+          {% endfor %}
+        {% endfor %}
+        {% assign variants_list_sum = variants_list_sum | divided_by: 1.0 %}
+        {% assign variants_list_sum_average = variants_list_sum | divided_by: variants_list.size | divided_by: 1.0 %}
+        {%- if variants_list_sum_average != 0 and variants_list_sum_average < 1 -%}
+          <span class="variant-limited">{{ 'products.product.last_items' | t }}</span>
+      {%- endif -%}
+    </div>
+
+        <a href="javascript:void(0);" id="sizeBtn">Size-Guide</a>
+      {%-endif-%}
+    
+  </label>
+ 
+  {%- assign option_index = forloop.index -%}
+  <fieldset class="variant-input-wrap"
+    name="{{ option.name }}"
+    data-index="option{{ option_index }}"
+    data-handle="{{ option.name | handleize }}"
+    id="ProductSelect-{{ section_id }}-{{ product.id }}-option-{{ forloop.index0 }}">
+    <legend class="hide">{{ option.name }}
+   
+    </legend>
+    
+    {%- for value in option.values -%}   
+      {%- liquid
+        assign product_available = true
+        if product.options.size == 1
+          assign product_available = product.variants[forloop.index0].available
+        endif
+      -%}  
+
+      {%-if option.name =='Taglia' or option.name =='Size' or option.name =='Color' or option.name =='Colore' -%}
+      {%- for variant in product.variants -%}
+        {%- if variant and variant.title contains value -%}
+          {%- liquid
+            assign product_available = true
+            if product.options.size == 1
+              assign product_available = product.variants[forloop.index0].available
+            endif
+          -%}
+        {%- else -%}
+        
+        {%- liquid
+          assign product_available = false
+          if product.options.size == 1
+            assign product_available = product.variants[forloop.index0].available
+          endif
+        -%}
+        {%- endif -%}
+      {%- endfor -%} 
+    {%- endif -%}
+
+      {% comment %} {%- for variant in product.variants -%}
+        {%- if variant.title contains value -%}
+          {%- liquid
+            assign product_available = true
+            if product.options.size == 1
+              assign product_available = product.variants[forloop.index0].available
+            endif
+          -%}
+        {%- else -%}
+        {%- liquid
+          assign product_available = false
+          if product.options.size == 1
+            assign product_available = product.variants[forloop.index0].available
+          endif
+        -%}
+        {%- endif -%}
+      {%- endfor -%}  {% endcomment %}
+    
+      <div
+        class="variant-input {% if is_color %}custom_color{%else%} custom_{{ option.name | downcase | handelize }} {% endif %}"
+           data-newcolor="{{ value | handleize }}"
+        data-index="option{{ option_index }}"
+        data-value="{{ value | escape }}">
+        <input type="radio"
+          form="{{ form_id }}"
+          {% if option.selected_value == value %} checked="checked"{% endif %}
+          value="{{ value | escape }}"
+          data-index="option{{ option_index }}"
+          name="{{ option.name }}"
+          data-variant-input
+          class="{% unless product_available %} disabled{% endunless %}{% if is_color %}variant__input--color-swatch{% endif %}"
+          {% if is_color %} data-color-name="{{ value | escape }}"{% endif %}
+          {% if is_color %} data-color-index="{{ color_option_index }}"{% endif %}
+          id="ProductSelect-{{ section_id }}-{{ product.id }}-option-{{ option.name | handleize }}-{{ value | url_encode }}">
+        {%- if is_color -%}
+          {%- liquid
+            assign color_file_name = value | handle | append: '.' | append: swatch_file_extension
+            assign color_image = color_file_name | file_img_url: '50x50' | prepend: 'https:' | split: '?' | first
+            assign color_swatch_fallback = value | split: ' ' | last | handle
+          -%}
+          <label data-alt="{{value | downcase | handleize}}"
+            for="ProductSelect-{{ section_id }}-{{ product.id }}-option-{{ option.name | handleize }}-{{ value | url_encode }}"
+            class="variant__button-label color-swatch color-swatch--{{ value | handle }}{% unless product_available %} disabled{% endunless %}"
+            style="background-color: {{ color_swatch_fallback }};{% if images[color_file_name] != blank %}  background-image: url({{ color_image }});{% endif %}"
+          >
+            {{ value | escape }}
+          </label>
+        {%- else -%}
+          <label
+            for="ProductSelect-{{ section_id }}-{{ product.id }}-option-{{ option.name | handleize }}-{{ value | url_encode }}"
+            class="variant__button-label{% unless product_available %} disabled{% endunless %}">
+           
+         {%if option.name =='Materiale' or option.name =='Material' %}
+            {{ value | split:'(' | first | escape }}
+            {%else %}
+            {{ value | escape }}
+            {%endif%}
+        </label>
+        {%- endif -%}
+      </div>
+    {%- endfor -%}
+  </fieldset>
+</div>
+<style>
+    .variant-limited {
+      color: #AF5E57;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      background-color: #fff;
+      text-transform: none;
+      white-space: nowrap;
+    }
+
+    .variant-wrapper label.variant__label {
+      position: relative;
+    }
+</style>
+<script>
+// Get the modal
+var modal = document.getElementById("sizeModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("sizeBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>

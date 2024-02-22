@@ -1,0 +1,58 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+      }
+    },
+    "rich-text": {
+      "type": "rich-text",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "title": "Resi"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": true,
+            "text": "<p>Prima di effettuare una richiesta di reso assicurati di aver letto la policy su <a href=\"\/policies\/refund-policy\" target=\"_blank\" title=\"Refund Policy\">resi e rimborsi<\/a>.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "text"
+      ],
+      "settings": {
+        "align_text": "center",
+        "narrow_column": true,
+        "divider": false
+      }
+    },
+    "form": {
+      "type": "contact-form",
+      "settings": {
+        "title": "Richiesta di reso",
+        "text": "<p>Compila il form con i dati richiesti per effettuare una richiesta di reso.<\/p>",
+        "show_Choose_option": true,
+        "text1": "Scarpa troppo piccola \/ troppo grande",
+        "text2": "Ho cambiato idea",
+        "text3": "Ho ricevuto la scarpa sbagliata",
+        "text4": "Prodotto difettoso",
+        "text5": "Altro",
+        "text6": "",
+        "show_phone": false,
+        "narrow_column": true
+      }
+    }
+  },
+  "order": [
+    "main",
+    "rich-text",
+    "form"
+  ]
+}

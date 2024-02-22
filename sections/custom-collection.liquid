@@ -1,0 +1,429 @@
+<div class="main-custom-collection-section">
+  <div class="page-width">
+    <div class="section-header">
+      {% if section.settings.heading !=blank %}
+      <h2 class="section-header__title">{{ section.settings.heading  }}</h2>
+      {% endif %}
+    </div>
+    <div class="custome-collection">  
+      <div class="custome-collection-href">
+        {% for block in section.blocks %}
+        {%- case block.type -%}
+        {%- when 'left_image' -%}
+        <a class="custom-link" href="{{block.settings.link1}}">
+          <div class="custom-title-with-btn mobile">
+            {%- if block.settings.right_title != blank -%}
+            <div class="custom-collection-text title">
+              {{block.settings.right_title}}  
+            </div>
+            {% endif %}
+            {%- if block.settings.button_label1 != blank -%}
+            <div class="grid__item  custom-collection-btn">
+              <a href="{{ block.settings.button_link1 }}" class="custm_btn">
+                {{ block.settings.button_label1 }}
+              </a>
+            </div>
+            {%- endif -%}
+          </div>
+          <div class="left-image grid custom-collection-slider custom-featured-collection" >
+            {%- if block.settings.left_image != blank -%}
+            <div class="grid__item medium-up--two-thirds  custome-collection-image ">
+              <img src="{{block.settings.left_image | img_url: 'master'}}">
+            </div>
+            {% endif %}
+            <div class="grid__item medium-up--two-sixths custom-collection-with-content mobile">
+              {%- if block.settings.text1 != blank -%}
+              <div class="custom-collection-text rte mobile ">
+                {% render 'quote-left' %}
+                <p> {{block.settings.text1}} </p>
+                <div class="bottom-quote">
+                  {% render 'quote-right' %}
+                </div>
+              </div>
+                              {% else %}
+                
+                <div class="custom-collection-text-1 rte desktop-1{% if block.settings.text_layout =='top' %} text_layout {% endif %}">
+                   {% render 'quote-left' %}
+                  <p> {{block.settings.text}}  </p>
+                   {% render 'quote-right' %}
+                </div>
+              
+{%- endif -%}
+
+
+            </div>
+
+            <div class="grid__item medium-up--two-sixths custom-collection-with-content">
+              {%- if block.settings.text != blank -%}
+              <div class="custom-collection-text rte desktop">
+                {% render 'quote-left' %}
+                <p> {{block.settings.text}} </p>
+                <div class="bottom-quote">
+                  {% render 'quote-right' %}
+                </div>
+              </div>
+              {% endif %}
+              {%- if block.settings.right_image != blank -%}
+              <div class="collection-content-image">
+                <img src="{{block.settings.right_image | img_url: 'master'}}">
+              </div>
+              {% endif %}
+              
+              {%- if block.settings.right_title != blank -%}
+              <div class="custom-collection-text title">
+                {{block.settings.right_title}}  
+              </div>
+              {% endif %}
+
+
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="custome-collection-href">
+        {%- when 'right_image' -%}
+        <a class="custom-link" href="{{block.settings.link2}}">
+          <div class="custom-title-with-btn mobile">
+            {%- if block.settings.title != blank -%}
+            <div class="custom-collection-text title">
+              {{block.settings.title}}  
+            </div>
+            {% endif %}
+            {%- if block.settings.button_label2 != blank -%}
+            <div class="grid__item  custom-collection-btn">
+              <a href="{{ block.settings.button_link2 }}" class="custm_btn">
+                {{ block.settings.button_label2 }}
+              </a>
+            </div>
+            {%- endif -%}
+          </div>
+          <div class="right-image grid custom-collection-slider2 custom-featured-collection {% if block.settings.layout =='left' %} image_layout {% endif %}"> 
+            <div class="grid__item medium-up--two-sixths custom-collection-with-content">
+
+
+              {%- if block.settings.feat_image != blank -%}
+              <div class="collection-content-image">
+                <img src="{{block.settings.feat_image | img_url:'master'}}">
+              </div>
+              {% endif %}     
+              {%- if block.settings.title != blank -%}
+              <div class="custom-collection-text  title">
+                {{block.settings.title}}  
+              </div>
+              {% endif %}
+
+              {%- if block.settings.text != blank -%}
+              <div class="custom-collection-text rte desktop {% if block.settings.text_layout =='top' %} text_layout {% endif %}">
+                {{block.settings.text}}  
+              </div>
+              {% endif %}
+            </div>
+            {%- if block.settings.main_right_image != blank -%}
+            <div class="grid__item  medium-up--two-thirds custome-collection-image">
+              <img src="{{block.settings.main_right_image | img_url:'master'}}">
+            </div>
+            {% endif %}
+            <div class="grid__item  medium-up--two-thirds custome-collection-image">
+              {%- if block.settings.text2 != blank -%}
+              <div class="custom-collection-text rte mobile {% if block.settings.text_layout =='top' %} text_layout {% endif %}">
+                {{block.settings.text2}}  
+              </div>
+                              {% else %}
+
+                <div class="custom-collection-text-1 rte desktop-1{% if block.settings.text_layout =='top' %} text_layout {% endif %}">
+                  {{block.settings.text}}  
+                </div>
+              
+{%- endif -%}
+          
+            </div>
+          </div>
+
+        </a>
+      </div>
+
+
+      <div class="custome-collection-href">
+
+        {%- when 'right_full_text' -%} 
+        <a class="custom-link" href="{{block.settings.link1}}">
+          <div class="custom-title-with-btn mobile">
+            {%- if block.settings.left_title != blank -%}
+            <div class="custom-collection-text title">
+              {{block.settings.left_title}}  
+            </div>
+            {% endif %}
+            {%- if block.settings.button_label3 != blank -%}
+            <div class="grid__item  custom-collection-btn">
+              <a href="{{ block.settings.button_link3 }}" class="btn">
+                {{ block.settings.button_label3 }}
+              </a>
+            </div>
+            {%- endif -%}
+          </div> 
+          <div class="full-text grid custom-collection-slider right_full_text custom-featured-collection {% if block.settings.layout =='left' %} image_layout {% endif %}">
+
+            {%- if block.settings.right_full_image != blank -%}
+            <div class="grid__item medium-up--two-thirds custome-collection-image ">
+              <img src="{{block.settings.right_full_image | img_url:'master'}}">
+
+
+            </div>
+
+            {% endif %}
+
+            <div class="grid__item medium-up--two-sixths custom-collection-with-content">
+              <div class="custom-collection-with-content-inner">
+                {%- if block.settings.left_title != blank -%}
+                <div class="custom-collection-text  title">
+                  {{block.settings.left_title}}  
+                </div>
+                {% endif %}
+
+                {%- if block.settings.left_full_image != blank -%}
+                <div class="collection-content-image">
+                  <img src="{{block.settings.left_full_image| img_url: 'master'}}">
+                </div>
+                {% endif %}
+             
+                {%- if block.settings.html_text != blank -%}
+                <div class="custom-collection-text rte desktop {% if block.settings.text_layout =='top' %} text_layout {% endif %}">
+                  {{block.settings.html_text}}  
+                </div>
+                {%- endif -%}
+    
+                   {%- if block.settings.html_text2 != blank -%}
+              <div class="cstm_left_img_mobile  rte mobile {% if block.settings.text_layout =='top' %} text_layout {% endif %}">
+                {{block.settings.html_text2}}  
+              </div>
+                {% else %}
+                
+                <div class="custom-collection-text-1 rte desktop-1{% if block.settings.text_layout =='top' %} text_layout {% endif %}">
+                  {{block.settings.html_text}}  
+                </div>
+              
+{%- endif -%}
+
+              </div>
+
+            </div>
+          </div>
+        </a>
+        {% endcase %}
+        {% endfor %}
+      </div>
+      {%- if section.settings.button_label3 != blank -%}
+      <div class="custom-collection-btn">
+        <a href="{{ section.settings.button_link3 }}" class="btn main-coll-btn{% if section.settings.button_style == 'secondary' %} btn--tertiary{% endif %}">
+          {{ section.settings.button_label3 }}
+        </a>
+      </div>
+      {%- endif -%}
+    </div>
+
+  </div>  
+</div>
+
+
+{% schema %}
+{
+"name": "Custom Left Right Block",
+"class":"index-section",
+"settings": [
+{
+"type":"text",
+"id":"heading",
+"label":"Title"
+},
+{
+"type": "text",
+"id": "button_label3",
+"label": "Button label"
+},
+{
+"type": "url",
+"id": "button_link3",
+"label": "Button link"
+}
+],
+"blocks":
+[
+{
+"name":"Left Image Right text",
+"type":"left_image",
+"settings":[
+
+{
+"type": "text",
+"id": "button_label1",
+"label": "Mobile Button label"
+},
+{
+"type": "url",
+"id": "button_link1",
+"label": " Mobile Button link"
+},
+{
+"type":"image_picker",
+"id":"left_image",
+"label":"Left Image"
+},
+{
+"type":"textarea",
+"id":"text",
+"label":"Desktop Text"
+},
+{
+"type":"richtext",
+"id":"text1",
+"label":"Mobile Text"
+},
+
+{
+"type":"image_picker",
+"id":"right_image",
+"label":"Right Image"
+},
+{
+"type":"text",
+"id":"right_title",
+"label":"Title"
+},
+{
+"type": "url",
+"id": "link1",
+"label": "Link"
+}
+]
+},
+{
+"name":"Left text Right image",
+"type":"right_image",
+"settings":[
+
+{
+"type": "text",
+"id": "button_label2",
+"label": "Button label"
+},
+{
+"type": "url",
+"id": "button_link2",
+"label": "Button link"
+},
+
+
+{
+"type":"image_picker",
+"id":"main_right_image",
+"label":"Left Image"
+},
+{
+"type":"textarea",
+"id":"text",
+"label":"Desktop Text"
+},
+{
+"type":"textarea",
+"id":"text2",
+"label":"Mobile Text"
+},
+
+{
+"type":"image_picker",
+"id":"feat_image",
+"label":"Right Image"
+},
+{
+"type":"text",
+"id":"title",
+"label":"Title"
+},
+
+{
+"type": "url",
+"id": "link2",
+"label": "Link"
+}
+]
+},
+{
+"name":"Left Image full text",
+"type":"right_full_text",
+"settings":[
+{
+"type": "text",
+"id": "button_label3",
+"label": "Button label"
+},
+{
+"type": "url",
+"id": "button_link3",
+"label": "Button link"
+},
+{
+"type":"image_picker",
+"id":"right_full_image",
+"label":"Left Image"
+},
+{
+"type":"text",
+"id":"left_title",
+"label":"Title"
+},
+{
+"type":"image_picker",
+"id":"left_full_image",
+"label":"Right Image"
+},
+{
+"type":"liquid",
+"id":"html_text",
+"label":"Desktop Text"
+},
+{
+"type":"liquid",
+"id":"html_text2",
+"label":"Mobile Text"
+},
+
+{
+"type": "select",
+"id": "button_style",
+"label": "Button style",
+"default": "primary",
+"options": [
+{
+"value": "primary",
+"label": "Primary"
+},
+{
+"value": "secondary",
+"label": "Secondary"
+}
+]
+},
+{
+"type": "url",
+"id": "link1",
+"label": "Link"
+}
+
+]
+}
+],
+"presets":
+[
+{
+"name":"Custom Left Right Block"
+
+}
+]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

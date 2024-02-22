@@ -1,0 +1,35 @@
+{%- for option in product.options_with_values -%}
+	{% if option.name == 'Color' %}          
+           <fieldset class="js product-form__input">
+            <legend class="form__label">{{ option.name }}</legend>
+             <div class="main_form">
+            {%- for value in option.values -%}      			
+            {{variant.option2}}     
+         	 {% capture radio_id %} {{ section.id }}-{{ option.position }}-{{ forloop.index0 }} {%endcapture%}
+              
+             {% assign colorname = '' %}               
+             {%assign variant_name =  value | downcase %}   
+             {% for i in (1..20) %}
+             {%- assign swatch_text = "swatch_text_" | append: i -%}
+        	 {% assign swatch_color= "swatch_color_" | append: i %}
+             {% assign color_name  = settings[swatch_text] | downcase %}      
+             {% assign colorname  = settings[swatch_color] %}
+          	 {%if color_name ==  variant_name%}
+             <div class="lable_input custom_color">
+               <input type="radio" id="{{ radio_id }}"
+                      data-text="{{ value | handleize }}"
+                   name="{{ option.name }}"
+                   value="{{ value | escape }}"
+                   form="{{ product_form_id }}"
+                   {% if option.selected_value == value %}checked{% endif %}
+                   >
+              <label data-text="{{ value | handleize }}"  for="{{ radio_id }}" class="colors-swatches swatch_{{ value |handleize }}" style="background-color:{{colorname}};"><span> {{ value }}</span>
+             </label>
+             </div>
+             {%endif%}                                                              
+             {%endfor%}
+          {%- endfor -%}
+             </div>
+          </fieldset>
+	{% endif %}
+{% endfor %}

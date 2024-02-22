@@ -1,0 +1,8 @@
+{%- comment -%} Variables set by Weglot's preferences panel {%- endcomment -%}
+
+{%- unless request.path == "/challenge" or request.path == "/checkouts" or request.path == "/password" -%}
+<link rel="alternate" hreflang="it" href="{{ canonical_url }}">
+
+<link rel="alternate" hreflang="{{ "en" }}" href="https://en.carmens.it{{ request.path }}">
+
+{%- endunless -%}

@@ -1,0 +1,90 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+      }
+    },
+    "rich-text": {
+      "type": "rich-text",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "title": "CONTEMPORANEE, RICERCATE, SOSTENIBILI."
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": false,
+            "text": "<p>Le nostre calzature riflettono la nostra visione, una visione che si spinge oltre la dimensione dello stile per accogliere in sé il rispetto per le persone e quello per il pianeta. In Carmens, crediamo che il comportamento virtuoso dei singoli contribuisca al benessere di tutti noi e delle generazioni a venire: per questa ragione progettiamo i nostri prodotti riducendo impatto sull’ambiente permettendo così, a te che li acquisti, di fare lo stesso. Scopri in che modo portiamo avanti il nostro impegno.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "text"
+      ],
+      "settings": {
+        "align_text": "center",
+        "narrow_column": true,
+        "divider": false
+      }
+    },
+    "text-columns": {
+      "type": "text-columns",
+      "blocks": {
+        "column1": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image_width": 650,
+            "title": "PRODUZIONE RESPONSABILE",
+            "text": "<p>L’intera collezione SS22 è realizzata utilizzando pelle LWG®: pelle, cioè, la cui produzione e lavorazione hanno superato i rigorosi audit di Leather Working Group, l’organizzazione che<br\/>riunisce i brand, i fornitori e le manifatture del settore della pelletteria più impegnati nell’adottare le best practice in termini di sostenibilità.<\/p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "column2": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image_width": 650,
+            "title": "PACKAGING GREEN",
+            "text": "<p>Il nostro approccio è sistemico: non ci occupiamo solo di produrre responsabilmente, ma adottiamo<br\/>lo stesso sguardo anche nei confronti del packaging. Tutte le nostre confezioni, infatti, sono realizzate esclusivamente con carta riciclata FSC, riciclabile al 100%.<\/p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "column3": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image_width": 650,
+            "title": "SMALTIMENTO SMART",
+            "text": "<p>Grazie ai simboli che riportiamo chiaramente sulla confezione, la raccolta differenziata diventa più<br\/>semplice e immediata: sul packaging troverai l’indicazione di smaltimento più corretto per ogni elemento di cui è composto, dal cartone al supporto interno, fino alla carta velina che proteggeva le tue nuove calzature.<\/p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column1",
+        "column2",
+        "column3"
+      ],
+      "settings": {
+        "title": "",
+        "align_text": "center",
+        "divider": false
+      }
+    }
+  },
+  "order": [
+    "main",
+    "rich-text",
+    "text-columns"
+  ]
+}

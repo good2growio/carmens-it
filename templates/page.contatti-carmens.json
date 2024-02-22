@@ -1,0 +1,81 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+      }
+    },
+    "rich-text": {
+      "type": "rich-text",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "title": "Contatti"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": true,
+            "text": "<p>Per qualunque domanda o richiesta puoi contattarci usando i nostri riferimenti. Risponderemo alle tue richieste il prima possibile!<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "text"
+      ],
+      "settings": {
+        "custom_class": "",
+        "align_text": "center",
+        "narrow_column": true,
+        "divider": false
+      }
+    },
+    "map": {
+      "type": "map",
+      "settings": {
+        "map_title": "CARMENS",
+        "address": "<p>35030 Galzignano Terme<br\/>Padova (ITALY)<br\/>Tel. +39 049 9133400<br\/>E-mail: <a href=\"mailto:carmens@carmens.it\">carmens@carmens.it<\/a><\/p>",
+        "map_address": "",
+        "api_key": "",
+        "show_button": false,
+        "background_image": "shopify:\/\/shop_images\/IMMAGINE_PAGINA_CONTATTI_01a7dcd4-8303-44da-a9fe-203a4bd06bc6.jpg",
+        "background_image_position": "center center"
+      }
+    },
+    "164699288027f874ef": {
+      "type": "contact-form",
+      "disabled": true,
+      "settings": {
+        "title": "Contact us",
+        "text": "",
+        "show_Choose_option": false,
+        "text1": "Sale",
+        "text2": "Enquiry",
+        "text3": "Returns",
+        "text4": "",
+        "text5": "",
+        "text6": "",
+        "show_phone": true,
+        "narrow_column": true
+      }
+    },
+    "164693287867e1c909": {
+      "type": "custom-product-slider-section",
+      "settings": {
+        "bestseller_heading": "I più desiderati",
+        "bestsellr_coll": "i-piu-desiderati"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "rich-text",
+    "map",
+    "164699288027f874ef",
+    "164693287867e1c909"
+  ]
+}

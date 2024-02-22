@@ -1,0 +1,276 @@
+{
+  "sections": {
+    "slideshow": {
+      "type": "slideshow",
+      "blocks": {
+        "slideshow-0": {
+          "type": "image",
+          "settings": {
+            "top_subheading": "",
+            "title": "",
+            "title_size": 71,
+            "subheading": "",
+            "link": "shopify:\/\/collections\/all",
+            "link_text": "SCOPRI DI PIÚ",
+            "link_2": "shopify:\/\/collections\/all",
+            "link_text_2": "",
+            "color_accent": "#577caf",
+            "text_align": "vertical-center horizontal-left",
+            "image": "shopify:\/\/shop_images\/SALDI_19.jpg",
+            "image_mobile": "shopify:\/\/shop_images\/FINO_AL_30_DI_SCONTO_SUI_TUOI_MODELLI_PREFERITI.png",
+            "overlay_opacity": 4,
+            "button_overlay_opacity": 4,
+            "focal_point": "top center"
+          }
+        }
+      },
+      "block_order": [
+        "slideshow-0"
+      ],
+      "settings": {
+        "section_height": "natural",
+        "mobile_height": "auto",
+        "parallax": false,
+        "style": "bars",
+        "autoplay": true,
+        "autoplay_speed": 7
+      }
+    },
+    "16450984337561eba9": {
+      "type": "custom-product-slider-section",
+      "settings": {
+        "bestseller_heading": "I più desiderati",
+        "bestsellr_coll": "i-piu-desiderati"
+      }
+    },
+    "1645099332476ab788": {
+      "type": "custom-collection",
+      "blocks": {
+        "5e5c8259-2852-404e-820a-b9c4b7df6405": {
+          "type": "left_image",
+          "settings": {
+            "button_label1": "Scopri di più",
+            "button_link1": "shopify:\/\/products\/brook-boot-boots-a52301",
+            "left_image": "shopify:\/\/shop_images\/IMMAGINE_STRILLO_EDITORIALE_STILL_1_ALTERNATIVA_d4a49591-ef28-4dad-abc8-c5ee9b350eb3.jpg",
+            "text": "Sporty chic. Lo stivale giusto per elevare il tuo stile all day long senza rinunciare al comfort",
+            "text1": "<p>Sporty chic. Lo stivale giusto per elevare il tuo stile all day long senza rinunciare al comfort<\/p>",
+            "right_image": "shopify:\/\/shop_images\/ok_STILL_1_DA_MODIFICARE_950_X_570.png",
+            "right_title": "BROOK BOOT",
+            "link1": "shopify:\/\/products\/brook-boot-boots-a52301"
+          }
+        },
+        "6e3c1822-d505-4426-b41d-bf3ca573e39f": {
+          "type": "right_image",
+          "settings": {
+            "button_label2": "Scopri di più",
+            "button_link2": "shopify:\/\/products\/taylor-chain-decollete-a52191",
+            "main_right_image": "shopify:\/\/shop_images\/Nuovo_progetto_3_5053c483-d268-4b22-b555-0b43ce314ddf.jpg",
+            "text": "Amore a prima vista.\nLa silhouette di un mocassino, abbinata al tacco squadrato e ad uno stile contemporaneo? Per donare un tocco di grinta agli outfit più eleganti!",
+            "text2": "Amore a prima vista.\nLa silhouette di un mocassino, abbinata al tacco squadrato e ad uno stile contemporaneo? Per donare un tocco di grinta agli outfit più eleganti!",
+            "feat_image": "shopify:\/\/shop_images\/ok_STILL_2_DA_MODIFICARE_1040X602_1.png",
+            "title": "TAYLOR CHAIN",
+            "link2": "shopify:\/\/products\/taylor-chain-decollete-a52191"
+          }
+        },
+        "413040b8-3a47-4abb-b5d9-a864ef8b1ba7": {
+          "type": "right_full_text",
+          "settings": {
+            "button_label3": "Scopri di più",
+            "button_link3": "shopify:\/\/products\/vivien-low-ankle-boots-a52136",
+            "right_full_image": "shopify:\/\/shop_images\/IMMAGINE_INFO_SCHEDA_PRODOTTO_STILL_3.jpg",
+            "left_title": "VIVIEN LOW",
+            "left_full_image": "shopify:\/\/shop_images\/fw23_still3.png",
+            "html_text": "<p><strong>Modello <\/strong>Stivaletti<\/p><p><strong>Tacco<\/strong> 8cm<\/p><p><strong>Materiale <\/strong>Camoscio<\/p>",
+            "html_text2": "<p><strong>Modello <\/strong>Stivaletti<\/p><p><strong>Tacco<\/strong> 8cm<\/p><p><strong>Materiale <\/strong>Camoscio<\/p>",
+            "button_style": "secondary",
+            "link1": "shopify:\/\/products\/zanya-trim-sabots-a51188"
+          }
+        }
+      },
+      "block_order": [
+        "5e5c8259-2852-404e-820a-b9c4b7df6405",
+        "6e3c1822-d505-4426-b41d-bf3ca573e39f",
+        "413040b8-3a47-4abb-b5d9-a864ef8b1ba7"
+      ],
+      "settings": {
+        "heading": "Sotto i Riflettori",
+        "button_label3": "Scopri Tutta La Collezione SS23",
+        "button_link3": "shopify:\/\/collections\/all"
+      }
+    },
+    "16451604511b618b9d": {
+      "type": "advanced-content",
+      "blocks": {
+        "1645160451a91ca3bd-1": {
+          "type": "liquid",
+          "settings": {
+            "code": "<h2>Carmens<\/h2>\n<p>Un mix di tradizione e modernità, dove le influenze arrivano dal mondo esterno per fondersi con il know-how e competenze cinquantennali dello stesso Calzaturificio Carmens.<\/p>",
+            "width": "50%",
+            "button_label": "SCOPRI DI PIÙ",
+            "button_link": "shopify:\/\/pages\/about",
+            "button_style": "primary",
+            "button_background_color": "#b9b4af",
+            "button_color_text": "#000000",
+            "alignment": "center"
+          }
+        },
+        "1645160451a91ca3bd-0": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/fw23_homecarmens.png",
+            "link": "",
+            "width": "33%",
+            "alignment": "bottom-middle"
+          }
+        }
+      },
+      "block_order": [
+        "1645160451a91ca3bd-1",
+        "1645160451a91ca3bd-0"
+      ],
+      "settings": {
+        "background_color": "#8b827b",
+        "full_width": false,
+        "space_around": true
+      }
+    },
+    "blog-posts": {
+      "type": "blog-posts",
+      "disabled": true,
+      "settings": {
+        "page_width": false,
+        "custom_class": "home-blog-sec",
+        "title": "Il mondo Carmens",
+        "blog": "notizie",
+        "post_limit": 3,
+        "blog_show_excerpt": true,
+        "blog_show_tags": false,
+        "blog_show_date": false,
+        "blog_show_comments": false,
+        "blog_show_author": false,
+        "view_all": false,
+        "blog_image_size": "square",
+        "divider": false
+      }
+    },
+    "1645522739eaa52230": {
+      "type": "main_collections_list",
+      "blocks": {
+        "16455227393f06a7ca-0": {
+          "type": "collection",
+          "settings": {
+            "collection": "military-booties",
+            "feat_img": "shopify:\/\/shop_images\/LASCIATI_ISPIRARE_ALTERNATVA.jpg",
+            "title": "MILITARY BOOTIES",
+            "text": "",
+            "button_label1": "Scopri Di Piu",
+            "button_link1": "shopify:\/\/collections\/military-booties"
+          }
+        },
+        "16455227393f06a7ca-1": {
+          "type": "collection",
+          "disabled": true,
+          "settings": {
+            "collection": "decollete",
+            "feat_img": "shopify:\/\/shop_images\/Look_10_0385_copia.png",
+            "title": "Prova",
+            "text": "",
+            "button_label1": "Scopri Di Piu",
+            "button_link1": "#"
+          }
+        },
+        "16455227393f06a7ca-2": {
+          "type": "collection",
+          "disabled": true,
+          "settings": {
+            "collection": "flats",
+            "title": "",
+            "text": "",
+            "button_label1": "Scopri Di Piu",
+            "button_link1": "#"
+          }
+        }
+      },
+      "block_order": [
+        "16455227393f06a7ca-0",
+        "16455227393f06a7ca-1",
+        "16455227393f06a7ca-2"
+      ],
+      "settings": {
+        "title": "Lasciati ispirare",
+        "divider": false,
+        "per_row": 3,
+        "enable_gutter": true,
+        "collection_grid_shape": "landscape"
+      }
+    },
+    "16451660560c379825": {
+      "type": "rich-icon-text",
+      "blocks": {
+        "e987cbc6-f119-4742-b330-a4a106b32a32": {
+          "type": "icon_text",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Icon_awesome-heart_3x_91659ef3-12d7-46d7-b678-80493b5e2516.png",
+            "text": "<p>Sconto 10% di benvenuto<\/p>"
+          }
+        },
+        "504ea21b-4df8-4db6-801e-c5a5aed487a2": {
+          "type": "icon_text",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Icon_material-timer_3x_151ead9d-ad21-4a92-91d3-6fa645d8f52a.png",
+            "text": "<p>Spedizione in 24\/48h in tutta Italia<\/p>"
+          }
+        },
+        "853948f5-dbdd-4323-9c54-d50a4b4f9c34": {
+          "type": "icon_text",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Raggruppa_137_3x_5bcee2cc-3aaf-40b4-8960-760588ff5a56.png",
+            "text": "<p>Customer care <a href=\"\/pages\/contact\" title=\"Contatti\">telefonico<\/a> e via <a href=\"mailto:carmens@carmens.it\" title=\"mailto:carmens@carmens.it\">e-mail<\/a><\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "e987cbc6-f119-4742-b330-a4a106b32a32",
+        "504ea21b-4df8-4db6-801e-c5a5aed487a2",
+        "853948f5-dbdd-4323-9c54-d50a4b4f9c34"
+      ],
+      "settings": {
+        "background_color": "#cec8c3",
+        "narrow_column": true,
+        "space_around": true,
+        "title": "Le nostre Clienti ci amano."
+      }
+    },
+    "1646302678120b3868": {
+      "type": "apps",
+      "blocks": {
+        "329a9c40-fc76-4592-a5ce-f0b92ae644d5": {
+          "type": "shopify:\/\/apps\/instafeed\/blocks\/app-block\/c447db20-095d-4a10-9725-b5977662c9d5",
+          "settings": {
+            "title": "",
+            "title_color": "",
+            "alignment": "center",
+            "html_area": "<div class=\"page-width instagram_feed_text text-left\">\n<h2>Seguici su instagram<\/h2>Spunti e suggerimenti di stile ti aspettano su\n<a target=\"_blank\" href=\"https:\/\/www.instagram.com\/carmensofficial\/?hl=en\">@carmensofficial<\/a>\n<\/div>"
+          }
+        }
+      },
+      "block_order": [
+        "329a9c40-fc76-4592-a5ce-f0b92ae644d5"
+      ],
+      "settings": {
+        "full_width": false,
+        "space_around": true
+      }
+    }
+  },
+  "order": [
+    "slideshow",
+    "16450984337561eba9",
+    "1645099332476ab788",
+    "16451604511b618b9d",
+    "blog-posts",
+    "1645522739eaa52230",
+    "16451660560c379825",
+    "1646302678120b3868"
+  ]
+}

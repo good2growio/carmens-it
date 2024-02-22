@@ -1,0 +1,129 @@
+{
+  "sections": {
+    "16460428449d082690": {
+      "type": "slideshow",
+      "blocks": {
+        "1646042844d209573d-0": {
+          "type": "image",
+          "settings": {
+            "top_subheading": "",
+            "title": "Collezioni",
+            "title_size": 40,
+            "subheading": "",
+            "link": "",
+            "link_text": "",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "rgba(0,0,0,0)",
+            "text_align": "vertical-bottom horizontal-left",
+            "image": "shopify:\/\/shop_images\/242867645_5052902981392939_8547028019660692745_n_2x_4a259795-c328-4f3b-82a1-38b0e5b7ca8e.png",
+            "image_mobile": "shopify:\/\/shop_images\/242867645_5052902981392939_8547028019660692745_n.png",
+            "overlay_opacity": 0,
+            "button_overlay_opacity": 0,
+            "focal_point": "center center"
+          }
+        }
+      },
+      "block_order": [
+        "1646042844d209573d-0"
+      ],
+      "settings": {
+        "section_height": "450px",
+        "mobile_height": "300px",
+        "parallax": false,
+        "style": "minimal",
+        "autoplay": false,
+        "autoplay_speed": 5
+      }
+    },
+    "main": {
+      "type": "list-collections-template",
+      "disabled": true,
+      "settings": {
+        "title_enable": true,
+        "display_type": "all",
+        "sort": "alphabetical",
+        "grid": "4"
+      }
+    },
+    "1646028800bfabd49e": {
+      "type": "featured-collections",
+      "blocks": {
+        "16460288008dedab00-0": {
+          "type": "collection",
+          "settings": {
+            "collection": "decollete",
+            "title": "",
+            "focal_point": "center center"
+          }
+        },
+        "16460288008dedab00-1": {
+          "type": "collection",
+          "settings": {
+            "collection": "flats",
+            "title": "",
+            "focal_point": "center center"
+          }
+        },
+        "16460288008dedab00-2": {
+          "type": "collection",
+          "settings": {
+            "collection": "allaciate",
+            "title": "",
+            "focal_point": "center center"
+          }
+        },
+        "16460288008dedab00-3": {
+          "type": "collection",
+          "settings": {
+            "collection": "ankle-boots",
+            "title": "",
+            "focal_point": "center center"
+          }
+        },
+        "fbc82e47-aaa4-4398-add9-0f4d7af47ed3": {
+          "type": "collection",
+          "settings": {
+            "collection": "ex-loafers",
+            "title": "",
+            "focal_point": "center center"
+          }
+        }
+      },
+      "block_order": [
+        "16460288008dedab00-0",
+        "16460288008dedab00-1",
+        "16460288008dedab00-2",
+        "16460288008dedab00-3",
+        "fbc82e47-aaa4-4398-add9-0f4d7af47ed3"
+      ],
+      "settings": {
+        "title": "Imperdibili",
+        "button_label": "",
+        "button_link": "",
+        "divider": false,
+        "per_row": 5,
+        "enable_gutter": true
+      }
+    },
+    "1646028829c0f1d8fb": {
+      "type": "collection-more-discount",
+      "settings": {
+        "background_color": "#577caf",
+        "narrow_column": false,
+        "divider": false,
+        "code": "<strong>Nuovi Ribassi<\/strong> <span class=\"seprator\">|<\/span> <span>Tuoi Modelli Preferiti Ancora Piu Scontati<\/span>",
+        "link": "#",
+        "link_text": "Vai Agli Sconti",
+        "button_background_color": "#8baad2",
+        "button_color_text": "#ffffff"
+      }
+    }
+  },
+  "order": [
+    "16460428449d082690",
+    "main",
+    "1646028800bfabd49e",
+    "1646028829c0f1d8fb"
+  ]
+}

@@ -1,0 +1,98 @@
+<div class="index-section">
+<div class="main-rich-icon-with-text" style="background:{{section.settings.background_color}};">
+{%- unless section.settings.full_width -%}
+  <div class="page-width{% if section.settings.narrow_column %} page-width--narrow{% endif %}">
+{%- endunless -%}
+    <div class="rich-icon-with-text">
+       {%- if section.settings.title != blank -%}
+      <div class="rich-icon-title">
+       <h2>{{ section.settings.title | escape }}</h2>
+      </div>
+      {% endif %}
+      {% for block in section.blocks %}
+      <div class="icons-image-content">
+         {%- if block.settings.image != blank -%}
+        <div class="icon-image">
+           <img src="{{block.settings.image | img_url: 'master'}}">  
+        </div>
+        {% endif %}      
+ {%- if block.settings.text != blank -%}
+        <div class="custom-collection-text rte">
+        {{block.settings.text}}  
+   </div>
+         {% endif %} 
+      </div>
+      {% endfor %}
+
+      
+    </div>
+    </div>
+  </div>
+  
+</div>
+
+
+
+
+
+{% schema %}
+{
+"name": "Rich Icon Text",
+"settings": [
+      {
+       "type": "color",
+       "id": "background_color",
+       "label": "Background color",
+       "default": "#ffffff"
+     },
+{
+        "type": "checkbox",
+        "id": "narrow_column",
+        "label": "Narrow column",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "space_around",
+        "label": "Add spacing above and below",
+        "default": true
+      },
+{
+"type":"text",
+"id":"title",
+"label":"Heading"
+}
+],
+"blocks":
+[
+{
+"name":"Icon Text",
+"type":"icon_text",
+"settings":[
+{
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          },
+{
+"type":"richtext",
+"id":"text",
+"label":"Text"
+}
+
+]
+}
+],
+"presets":[
+{
+"name":"Rich Icon text"
+}
+]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

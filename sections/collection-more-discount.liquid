@@ -1,0 +1,89 @@
+{% if collection.handle =='all' or template == 'index' %}
+{%- if section.settings.divider -%}<div class="section--divider">{%- endif -%}
+
+<div class="page-width{% if section.settings.narrow_column %} page-width--narrow{% endif %}">
+<div class="more-discount-section" style="background:{{section.settings.background_color}};">
+  {%- if section.settings.code != blank -%}
+  <div class="more-discount-text">
+    {{ section.settings.code }}
+  </div>
+  {% endif -%}
+  {%- if section.settings.link_text != blank -%}
+  <div class="more-discount-btn">
+    <a href="{{ section.settings.link }}" class="btn discount_btn">
+      {{ section.settings.link_text }}
+    </a>
+  </div>
+  {%endif%}
+</div>
+</div>
+
+{% endif %}
+{%- if section.settings.divider -%}</div>{%- endif -%}
+<style>
+ .discount_btn{
+   background-color:{{section.settings.button_background_color}} !important;
+   color:{{section.settings.button_color_text}} !important;
+   
+ }
+</style>
+{% schema %}
+  {
+    "name": "More Discount",
+    "class": "index-section",
+    "settings": [
+      {
+       "type": "color",
+       "id": "background_color",
+       "label": "Background color",
+       "default": "#ffffff"
+     },
+      {
+        "type": "checkbox",
+        "id": "narrow_column",
+        "label": "Narrow column",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "divider",
+        "label": "Show section divider",
+        "default": false
+      },
+{
+            "type": "html",
+            "id": "code",
+            "label": "Heading"
+          },
+
+          {
+            "type": "url",
+            "id": "link",
+            "label": "Button link"
+          },
+          {
+            "type": "text",
+            "id": "link_text",
+            "label": "Button text",
+            "default": "Button"
+          },
+
+{
+"type":"color",
+"id":"button_background_color",
+"label":"Button color"
+},
+{
+"type":"color",
+"id":"button_color_text",
+"label":"Button Text"
+}
+      
+    ],
+
+    "presets": [{
+      "name": "collection More Discount"
+    }]
+  }
+{% endschema %}
+

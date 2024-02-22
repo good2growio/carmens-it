@@ -1,0 +1,131 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+      }
+    },
+    "1651579132b951abf9": {
+      "type": "rich-text",
+      "blocks": {
+        "165157913257f67847-0": {
+          "type": "heading",
+          "settings": {
+            "title": "Contemporanee, ricercate, sostenibili."
+          }
+        },
+        "165157913257f67847-1": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": false,
+            "text": "<p>Rispetto per le persone, rispetto per il pianeta. In Carmens, crediamo che il comportamento di ognuno di noi contribuisca al benessere dell’intera comunità e, per questa ragione, progettiamo i nostri prodotti riducendo il loro impatto sull’ambiente.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "165157913257f67847-0",
+        "165157913257f67847-1"
+      ],
+      "settings": {
+        "custom_class": "richtext_section",
+        "align_text": "center",
+        "narrow_column": true,
+        "divider": false
+      }
+    },
+    "16515791149b5a2dcf": {
+      "type": "text-and-image",
+      "settings": {
+        "background_color": "#ffffff",
+        "main_title": "Scopri In Che Modo Portiamo Avanti il Nostro Impegno",
+        "image": "shopify:\/\/shop_images\/carmens-sostenibilita-3.jpg",
+        "image_width": 700,
+        "subtitle": "",
+        "title": "Produzione responsabile",
+        "text": "<p>L’intera collezione SS22 è realizzata utilizzando pelle LWG®, e cioè pelle che rispetta le norme condivise dalla Leather Working Group, l’organizzazione che riunisce i brand, i fornitori e le manifatture del settore della pelletteria più impegnati nel campo della sostenibilità.<\/p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "align_text": "left",
+        "layout": "left",
+        "divider": false
+      }
+    },
+    "1651579121ae0b87e3": {
+      "type": "text-and-image",
+      "settings": {
+        "background_color": "#ffffff",
+        "main_title": "",
+        "image": "shopify:\/\/shop_images\/image_2x_534559ea-9159-4413-9d36-edeea7d220f5.png",
+        "image_width": 700,
+        "subtitle": "",
+        "title": "Confezioni in materiale riciclato",
+        "text": "<p>Adottiamo lo stesso approccio anche nei confronti delle confezioni: tutte le nostre scatole, infatti, sono realizzate esclusivamente con carta riciclata FSC, riciclabile al 100%.<\/p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "align_text": "left",
+        "layout": "right",
+        "divider": false
+      }
+    },
+    "16515811414eda65f5": {
+      "type": "web_image-w-text",
+      "blocks": {
+        "f59503b1-6bb0-41ca-be4e-70c08afe5f6d": {
+          "type": "image",
+          "settings": {
+            "main_heading": "Scatola",
+            "feat_image": "shopify:\/\/shop_images\/pap20_4.jpg",
+            "block_text": "Carta"
+          }
+        },
+        "988356ab-02b7-4540-b368-3b95fdc0e8af": {
+          "type": "image",
+          "settings": {
+            "main_heading": "Supporto Interno",
+            "feat_image": "shopify:\/\/shop_images\/03_3.jpg",
+            "block_text": "Plastica"
+          }
+        },
+        "43209de3-7651-4f55-a083-4e72f69ef692": {
+          "type": "image",
+          "settings": {
+            "main_heading": "Materiale Di Riempimento Velina",
+            "feat_image": "shopify:\/\/shop_images\/pap20_4.jpg",
+            "block_text": "Carta"
+          }
+        }
+      },
+      "block_order": [
+        "f59503b1-6bb0-41ca-be4e-70c08afe5f6d",
+        "988356ab-02b7-4540-b368-3b95fdc0e8af",
+        "43209de3-7651-4f55-a083-4e72f69ef692"
+      ],
+      "settings": {
+        "background_color": "#ffffff",
+        "main_title": "",
+        "image": "shopify:\/\/shop_images\/carmens-sostenibilita-1.jpg",
+        "image_width": 700,
+        "subtitle": "",
+        "title": "Chiare indicazioni di smaltimento",
+        "text": "<p>La raccolta differenziata delle confezioni è semplice e immediata: per ogni elemento che le compone - dal cartone al supporto interno, fino alla carta velina che proteggeva le tue nuove calzature - trovi qui sotto i simboli con l’indicazione del contenitore di smaltimento più corretto.<\/p>",
+        "desc_text": "",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "align_text": "left",
+        "layout": "left",
+        "divider": false
+      }
+    }
+  },
+  "order": [
+    "main",
+    "1651579132b951abf9",
+    "16515791149b5a2dcf",
+    "1651579121ae0b87e3",
+    "16515811414eda65f5"
+  ]
+}

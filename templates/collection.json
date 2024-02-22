@@ -1,0 +1,327 @@
+{
+  "sections": {
+    "1646041670165bc83b": {
+      "type": "slideshow",
+      "blocks": {
+        "164604167021789f78-0": {
+          "type": "image",
+          "settings": {
+            "top_subheading": "Urban Life",
+            "title": "Contemporanea, dinamica, glamour",
+            "title_size": 48,
+            "subheading": "",
+            "link": "",
+            "link_text": "",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "rgba(0,0,0,0)",
+            "text_align": "vertical-bottom horizontal-center",
+            "image": "shopify:\/\/shop_images\/TUTTE_LE_COLLEZIONI_8d9ccdd2-13a5-4334-ade8-41c36ccbcadf.jpg",
+            "image_mobile": "shopify:\/\/shop_images\/TUTTE_LE_COLLEZIONI_9ae1ee6c-e5b9-4917-82ff-9d667df081c3.jpg",
+            "overlay_opacity": 0,
+            "button_overlay_opacity": 0,
+            "focal_point": "top center"
+          }
+        }
+      },
+      "block_order": [
+        "164604167021789f78-0"
+      ],
+      "settings": {
+        "section_height": "natural",
+        "mobile_height": "300px",
+        "parallax": false,
+        "style": "bars",
+        "autoplay": false,
+        "autoplay_speed": 5
+      }
+    },
+    "collection-header": {
+      "type": "collection-header",
+      "settings": {
+        "enable": true,
+        "collection_image_enable": true,
+        "parallax": false
+      }
+    },
+    "1646051728dd4942f9": {
+      "type": "featured-collections",
+      "blocks": {
+        "676b5d06-9f49-4e8e-b79d-cba5333d568e": {
+          "type": "collection",
+          "settings": {
+            "collection": "chelsea-boots",
+            "feat_img": "shopify:\/\/shop_images\/CHELSEA_BOOTS.png",
+            "title": "Chelsea Boots",
+            "focal_point": "center center"
+          }
+        },
+        "f90cba80-7761-41df-813a-14849fd408b4": {
+          "type": "collection",
+          "settings": {
+            "collection": "decollete",
+            "feat_img": "shopify:\/\/shop_images\/DECOLLETE.png",
+            "title": "",
+            "focal_point": "center center"
+          }
+        },
+        "16460517283a62c9f5-2": {
+          "type": "collection",
+          "settings": {
+            "collection": "military-booties",
+            "feat_img": "shopify:\/\/shop_images\/MILITARY_BOOTS.png",
+            "title": "",
+            "focal_point": "center center"
+          }
+        },
+        "588816a9-e03b-4c77-b603-e66268b64da7": {
+          "type": "collection",
+          "settings": {
+            "collection": "mocassini",
+            "feat_img": "shopify:\/\/shop_images\/MOCASSINI.png",
+            "title": "",
+            "focal_point": "center center"
+          }
+        },
+        "8e9b29eb-1a58-4f86-8fd8-667c429ea31e": {
+          "type": "collection",
+          "settings": {
+            "collection": "stivaletti",
+            "feat_img": "shopify:\/\/shop_images\/stivaletti_3.png",
+            "title": "Stivaletti",
+            "focal_point": "center center"
+          }
+        },
+        "a9408a37-cdba-42ae-a1cb-d68da94707a6": {
+          "type": "collection",
+          "settings": {
+            "collection": "stivali",
+            "feat_img": "shopify:\/\/shop_images\/STIVALI_9cccfc0d-f99f-4e43-9bf6-4bb1ecc2cd24.png",
+            "title": "",
+            "focal_point": "center center"
+          }
+        },
+        "d85085d1-1eb1-4e25-9f4f-171719700a10": {
+          "type": "collection",
+          "settings": {
+            "collection": "texani",
+            "feat_img": "shopify:\/\/shop_images\/TEXANI.png",
+            "title": "Texani",
+            "focal_point": "center center"
+          }
+        },
+        "16460517283a62c9f5-3": {
+          "type": "collection",
+          "disabled": true,
+          "settings": {
+            "collection": "beatles",
+            "feat_img": "shopify:\/\/shop_images\/beatles.jpg",
+            "title": "",
+            "focal_point": "center center"
+          }
+        },
+        "16460517283a62c9f5-0": {
+          "type": "collection",
+          "disabled": true,
+          "settings": {
+            "collection": "loafers",
+            "feat_img": "shopify:\/\/shop_images\/loafers.jpg",
+            "title": "",
+            "focal_point": "center center"
+          }
+        },
+        "16460517283a62c9f5-1": {
+          "type": "collection",
+          "disabled": true,
+          "settings": {
+            "collection": "flats-1",
+            "feat_img": "shopify:\/\/shop_images\/flat.jpg",
+            "title": "",
+            "focal_point": "center center"
+          }
+        },
+        "883af2dc-cec8-4bf2-b379-9cf6db46a0df": {
+          "type": "collection",
+          "disabled": true,
+          "settings": {
+            "collection": "ankle-boots-1",
+            "feat_img": "shopify:\/\/shop_images\/ankle-boots.jpg",
+            "title": "",
+            "focal_point": "center center"
+          }
+        },
+        "c46881a8-569d-4c41-b3b6-dacadce03cdb": {
+          "type": "collection",
+          "disabled": true,
+          "settings": {
+            "collection": "chanel",
+            "feat_img": "shopify:\/\/shop_images\/chanel.jpg",
+            "title": "",
+            "focal_point": "center center"
+          }
+        },
+        "fbf746df-0b5c-4a8b-9a03-be8c08558fd8": {
+          "type": "collection",
+          "disabled": true,
+          "settings": {
+            "collection": "sandali",
+            "feat_img": "shopify:\/\/shop_images\/tile_collezioni_sandals.jpg",
+            "title": "",
+            "focal_point": "center center"
+          }
+        },
+        "b9fbcfc8-5492-4303-8d5c-d79d62e27e75": {
+          "type": "collection",
+          "disabled": true,
+          "settings": {
+            "collection": "mules",
+            "feat_img": "shopify:\/\/shop_images\/sabot.jpg",
+            "title": "",
+            "focal_point": "center center"
+          }
+        },
+        "9c63437b-356f-47ac-b355-4fc579ea5241": {
+          "type": "collection",
+          "disabled": true,
+          "settings": {
+            "collection": "zeppe",
+            "feat_img": "shopify:\/\/shop_images\/wedges.jpg",
+            "title": "",
+            "focal_point": "center center"
+          }
+        }
+      },
+      "block_order": [
+        "676b5d06-9f49-4e8e-b79d-cba5333d568e",
+        "f90cba80-7761-41df-813a-14849fd408b4",
+        "16460517283a62c9f5-2",
+        "588816a9-e03b-4c77-b603-e66268b64da7",
+        "8e9b29eb-1a58-4f86-8fd8-667c429ea31e",
+        "a9408a37-cdba-42ae-a1cb-d68da94707a6",
+        "d85085d1-1eb1-4e25-9f4f-171719700a10",
+        "16460517283a62c9f5-3",
+        "16460517283a62c9f5-0",
+        "16460517283a62c9f5-1",
+        "883af2dc-cec8-4bf2-b379-9cf6db46a0df",
+        "c46881a8-569d-4c41-b3b6-dacadce03cdb",
+        "fbf746df-0b5c-4a8b-9a03-be8c08558fd8",
+        "b9fbcfc8-5492-4303-8d5c-d79d62e27e75",
+        "9c63437b-356f-47ac-b355-4fc579ea5241"
+      ],
+      "settings": {
+        "title": "Il look giusto, al momento giusto. Sempre.",
+        "button_label": "",
+        "button_link": "",
+        "divider": false,
+        "per_row": 5,
+        "enable_gutter": true
+      }
+    },
+    "1646050072b0bfe74e": {
+      "type": "collection-more-discount",
+      "disabled": true,
+      "settings": {
+        "background_color": "#577caf",
+        "narrow_column": false,
+        "divider": false,
+        "code": "<strong>Saldi<\/strong> <span class=\"seprator\">I<\/span> <span>Tuoi Modelli Preferiti Ancora Piu Scontati<\/span>",
+        "link": "#",
+        "link_text": "Vai Agli Sconti",
+        "button_background_color": "#9ab0cf",
+        "button_color_text": "#ffffff"
+      }
+    },
+    "main-collection": {
+      "type": "main-collection",
+      "blocks": {
+        "product_grid": {
+          "type": "product_grid",
+          "settings": {
+            "enable_collection_count": true,
+            "per_row": 3,
+            "rows_per_page": 8,
+            "mobile_flush_grid": false
+          }
+        },
+        "53ca07a7-2291-4b61-9d6b-662711665dfb": {
+          "type": "subcollections",
+          "disabled": true,
+          "settings": {
+            "subcollections_per_row": 5
+          }
+        }
+      },
+      "block_order": [
+        "product_grid",
+        "53ca07a7-2291-4b61-9d6b-662711665dfb"
+      ],
+      "settings": {
+        "enable_sold": true,
+        "enable_sidebar": true,
+        "enable_filter_count": false,
+        "collapsed": true,
+        "filter_style": "sidebar",
+        "enable_color_swatches": true,
+        "enable_sort": true
+      }
+    },
+    "1646050058585fd9ed": {
+      "type": "main_collections_list",
+      "blocks": {
+        "1646050058b844d846-0": {
+          "type": "collection",
+          "settings": {
+            "collection": "stivaletti",
+            "feat_img": "shopify:\/\/shop_images\/LASCIATI_ISPIRARE_c42a6d63-7182-4ec9-bc0d-0a5a40a93052.jpg",
+            "title": "",
+            "text": "",
+            "button_label1": "Scopri di più",
+            "button_link1": "shopify:\/\/collections\/stivaletti"
+          }
+        },
+        "1646050058b844d846-1": {
+          "type": "collection",
+          "disabled": true,
+          "settings": {
+            "collection": "sporty-chic",
+            "title": "",
+            "text": "",
+            "button_label1": "",
+            "button_link1": ""
+          }
+        },
+        "1646050058b844d846-2": {
+          "type": "collection",
+          "disabled": true,
+          "settings": {
+            "collection": "urban-chic",
+            "title": "",
+            "text": "",
+            "button_label1": "",
+            "button_link1": ""
+          }
+        }
+      },
+      "block_order": [
+        "1646050058b844d846-0",
+        "1646050058b844d846-1",
+        "1646050058b844d846-2"
+      ],
+      "settings": {
+        "title": "Lasciati ispirare",
+        "divider": false,
+        "per_row": 4,
+        "enable_gutter": true,
+        "collection_grid_shape": "landscape"
+      }
+    }
+  },
+  "order": [
+    "1646041670165bc83b",
+    "collection-header",
+    "1646051728dd4942f9",
+    "1646050072b0bfe74e",
+    "main-collection",
+    "1646050058585fd9ed"
+  ]
+}

@@ -1,0 +1,347 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "fe80be87-097f-4c87-90e3-25eb64756acb": {
+          "type": "title",
+          "settings": {
+            "sku_enable": true,
+            "collection_name": true
+          }
+        },
+        "c40ac7f1-3904-427f-b945-ae0ff124ac29": {
+          "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/preview_badge\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "disabled": true,
+          "settings": {
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+          }
+        },
+        "2a520be6-36fc-4b27-8eb3-963eba473587": {
+          "type": "shopify:\/\/apps\/scalapay-on-site-messaging\/blocks\/widget-block\/3be66716-9837-4466-bbb5-839858e44339",
+          "settings": {
+            "product_type": "payin3",
+            "countries": "AT,BE,FI,FR,DE,IT,NL,PT,ES",
+            "min_amount": 30,
+            "max_amount": 1500,
+            "hide_price": false,
+            "currency_position": "after",
+            "currency_display": "symbol",
+            "amount_selectors": "[\"span[data-product-price]\", \"sale-price\", \".price-item--last\", \".totals__subtotal-value\"]",
+            "position_selector": "",
+            "style": ""
+          }
+        },
+        "inventory_status": {
+          "type": "inventory_status",
+          "disabled": true,
+          "settings": {
+            "inventory_threshold": 10,
+            "inventory_transfers_enable": true
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "variant_labels": true,
+            "picker_type": "button",
+            "color_swatches": true
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false,
+            "surface_pickup_enable": false
+          }
+        },
+        "427c5081-1046-445b-b886-8878ff92de04": {
+          "type": "custom",
+          "disabled": true,
+          "settings": {
+            "code": "<svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" aria-hidden=\"true\" role=\"img\" width=\"24\" height=\"24\" preserveAspectRatio=\"xMidYMid meet\" viewBox=\"0 0 24 24\"><path fill=\"black\" d=\"M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10s10-4.5 10-10S17.5 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8s8 3.59 8 8s-3.59 8-8 8zm.5-13H11v6l5.2 3.2l.8-1.3l-4.5-2.7V7z\"\/><\/svg>\n<p>L’offerta scade in<span> 2h 10min 6sec<\/span><\/p>"
+          }
+        },
+        "separator": {
+          "type": "separator",
+          "disabled": true,
+          "settings": {
+          }
+        },
+        "269ac71d-08e2-4cd4-8fab-119b6239c3e5": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text1": "Ordina Ora",
+            "text": "+39 049 9133400"
+          }
+        },
+        "sales_point": {
+          "type": "sales_point",
+          "disabled": true,
+          "settings": {
+            "icon": "globe",
+            "text": "Free worldwide shipping"
+          }
+        },
+        "tab": {
+          "type": "tab",
+          "disabled": true,
+          "settings": {
+            "title": "Shipping information",
+            "content": "<p>Use collapsible tabs for more detailed information that will help customers make a purchasing decision.<\/p><p>Ex: Shipping and return policies, size guides, and other common questions.<\/p>",
+            "page": ""
+          }
+        },
+        "contact": {
+          "type": "contact",
+          "disabled": true,
+          "settings": {
+            "title": "Ask a question",
+            "phone": false
+          }
+        },
+        "share": {
+          "type": "share",
+          "disabled": true,
+          "settings": {
+          }
+        },
+        "description": {
+          "type": "description",
+          "disabled": true,
+          "settings": {
+            "is_tab": false
+          }
+        }
+      },
+      "block_order": [
+        "fe80be87-097f-4c87-90e3-25eb64756acb",
+        "c40ac7f1-3904-427f-b945-ae0ff124ac29",
+        "price",
+        "2a520be6-36fc-4b27-8eb3-963eba473587",
+        "inventory_status",
+        "variant_picker",
+        "buy_buttons",
+        "427c5081-1046-445b-b886-8878ff92de04",
+        "separator",
+        "269ac71d-08e2-4cd4-8fab-119b6239c3e5",
+        "sales_point",
+        "tab",
+        "contact",
+        "share",
+        "description"
+      ],
+      "settings": {
+        "image_position": "left",
+        "image_size": "medium",
+        "product_zoom_enable": true,
+        "thumbnail_position": "below",
+        "thumbnail_arrows": true,
+        "mobile_layout": "partial",
+        "enable_video_looping": true,
+        "title": "Guida Alle Taglie",
+        "text": "<p>Le nostre taglie sono allineate con le misure classiche delle calzature.<\/p>",
+        "image": "shopify:\/\/shop_images\/size-chart_1.png",
+        "product_video_style": "muted"
+      }
+    },
+    "sub": {
+      "type": "product-full-width",
+      "disabled": true,
+      "settings": {
+        "max_width": true
+      }
+    },
+    "164561613317c86e00": {
+      "type": "product_information_metafields",
+      "settings": {
+      }
+    },
+    "1645781686f203a7cb": {
+      "type": "custom_product",
+      "blocks": {
+        "f0a3bb6a-8f27-440c-baa7-8f813a8fde79": {
+          "type": "block-2",
+          "settings": {
+            "narrow_column": false,
+            "space_around": true,
+            "subtitle": "",
+            "title": "Urban Life",
+            "text": "<p>Contemporanea, dinamica e glamour: la FW23 di Carmens fonde uno stile ricercato, metropolitano e moderno, con i grandi classici dai dettagli cool. Una grintosa stampa animalier e un argento lunare contrastano le tipiche nuance di stagione. Il mondo flat, dall'appeal comfy, si alterna a stivali e tronchetti con kitten heels o tacchi contemporaneI, mentre decolletè bon-ton affiancano modelli dallo stile wild west per una donna che vuole esprimere il suo stile all day long<\/p>",
+            "button_label": "Scopri la collezione FW23",
+            "button_link": "shopify:\/\/collections\/all",
+            "image": "shopify:\/\/shop_images\/SCHEDA_PRODOTTO_FOCUS_ON_78236336-a8d9-45ab-a37c-e4286c82b50d.jpg",
+            "focal_point": "20% 0",
+            "layout": "left",
+            "height": 550,
+            "framed": false,
+            "parallax": false
+          }
+        },
+        "0087a0c2-9bed-4fe5-9cd8-6a0ac9154109": {
+          "type": "block-1",
+          "settings": {
+            "featured_product": "",
+            "space_around": true,
+            "subtitle": "",
+            "title": "",
+            "text": "<p>blocco custom<\/p>",
+            "button_label": "Prova",
+            "button_link": "shopify:\/\/products\/amy-boots-ankle-boots-a49177",
+            "image": "shopify:\/\/shop_images\/C_fa_8249_copia_LR.jpg",
+            "focal_point": "center",
+            "layout": "right",
+            "height": 550,
+            "framed": false,
+            "parallax": false
+          }
+        },
+        "ecec049d-1c39-42e7-9337-ae7a8729ba6e": {
+          "type": "block-1",
+          "settings": {
+            "featured_product": "",
+            "space_around": true,
+            "subtitle": "Impressive",
+            "title": "",
+            "text": "<p>blocco custom<\/p>",
+            "button_label": "",
+            "button_link": "",
+            "image": "shopify:\/\/shop_images\/C_fa_8249_copia_LR.jpg",
+            "focal_point": "center",
+            "layout": "right",
+            "height": 550,
+            "framed": false,
+            "parallax": false
+          }
+        },
+        "ad5b0ff6-eac1-4b82-bd06-e85b46f43499": {
+          "type": "block-1",
+          "settings": {
+            "featured_product": "",
+            "space_around": true,
+            "subtitle": "Impressive",
+            "title": "",
+            "text": "<p>blocco custom<\/p>",
+            "button_label": "",
+            "button_link": "",
+            "image": "shopify:\/\/shop_images\/C_fa_9742_copia_LR.jpg",
+            "focal_point": "center",
+            "layout": "right",
+            "height": 550,
+            "framed": false,
+            "parallax": false
+          }
+        }
+      },
+      "block_order": [
+        "f0a3bb6a-8f27-440c-baa7-8f813a8fde79",
+        "0087a0c2-9bed-4fe5-9cd8-6a0ac9154109",
+        "ecec049d-1c39-42e7-9337-ae7a8729ba6e",
+        "ad5b0ff6-eac1-4b82-bd06-e85b46f43499"
+      ],
+      "settings": {
+        "narrow_column": true
+      }
+    },
+    "16456817177a73ec8b": {
+      "type": "apps",
+      "blocks": {
+        "d137251b-4525-45f8-a360-d90128de08e8": {
+          "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/review_widget\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "disabled": true,
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "d137251b-4525-45f8-a360-d90128de08e8"
+      ],
+      "settings": {
+        "full_width": false,
+        "space_around": true
+      }
+    },
+    "1645250213eebffba4": {
+      "type": "rich-icon-text",
+      "blocks": {
+        "a6a6c9ee-1ca7-4089-9ab2-7d66abf2be66": {
+          "type": "icon_text",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Icon_awesome-heart_3x_91659ef3-12d7-46d7-b678-80493b5e2516.png",
+            "text": "<p>Sconto 10% di benvenuto<\/p>"
+          }
+        },
+        "cb5c1c4e-a1f7-4d3f-9c00-a39f34977c72": {
+          "type": "icon_text",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Icon_material-timer_3x_151ead9d-ad21-4a92-91d3-6fa645d8f52a.png",
+            "text": "<p>Spedizione in 24\/48h in tutta Italia<\/p>"
+          }
+        },
+        "b983cd75-1c75-47ec-8e2f-33d04584dc2a": {
+          "type": "icon_text",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Raggruppa_137_3x_5bcee2cc-3aaf-40b4-8960-760588ff5a56.png",
+            "text": "<p>Customer care <a href=\"\/pages\/contact\" title=\"Contatti\">telefonico<\/a> e via <a href=\"mailto:carmens@carmens.it\" title=\"mailto:carmens@carmens.it\">e-mail<\/a><\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "a6a6c9ee-1ca7-4089-9ab2-7d66abf2be66",
+        "cb5c1c4e-a1f7-4d3f-9c00-a39f34977c72",
+        "b983cd75-1c75-47ec-8e2f-33d04584dc2a"
+      ],
+      "settings": {
+        "background_color": "#cec8c3",
+        "narrow_column": false,
+        "space_around": true,
+        "title": "Le nostre Clienti ci amano."
+      }
+    },
+    "recently-viewed": {
+      "type": "recently-viewed",
+      "disabled": true,
+      "settings": {
+        "recent_count": 5
+      }
+    },
+    "product-recommendations": {
+      "type": "product-recommendations",
+      "settings": {
+        "show_product_recommendations": true,
+        "product_recommendations_heading": "Lasciati ispirare",
+        "related_count": 5
+      }
+    },
+    "collection-return": {
+      "type": "collection-return",
+      "disabled": true,
+      "settings": {
+      }
+    },
+    "1646285399ff45853f": {
+      "type": "apps",
+      "settings": {
+        "full_width": false,
+        "space_around": true
+      }
+    }
+  },
+  "order": [
+    "main",
+    "sub",
+    "164561613317c86e00",
+    "1645781686f203a7cb",
+    "16456817177a73ec8b",
+    "1645250213eebffba4",
+    "recently-viewed",
+    "product-recommendations",
+    "collection-return",
+    "1646285399ff45853f"
+  ]
+}

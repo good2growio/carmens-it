@@ -1,0 +1,421 @@
+{% comment %}
+Arguments
+- product: product object
+- [per_row]: number of items per row
+- [quick_shop_enable]: boolean
+- [collection]: collection object
+{% endcomment %}
+
+{%- liquid
+  unless per_row
+    assign per_row = 4
+  endunless
+
+  case per_row
+    when 1
+      assign grid_item_width = ''
+    when 2
+      assign grid_item_width = 'medium-up--one-half'
+    when 3
+      assign grid_item_width = 'small--one-half medium-up--one-third'
+    when 4
+      assign grid_item_width = 'small--one-half medium-up--one-quarter'
+    when 5
+      assign grid_item_width = 'small--one-half medium-up--one-fifth'
+    when 6
+      assign grid_item_width = 'small--one-half medium-up--one-sixth'
+  endcase
+
+  assign on_sale = false
+  if product.compare_at_price > product.price
+    assign on_sale = true
+  endif
+
+  assign product_tags = product.tags | join: ','
+  assign has_custom_label = false
+  if product.metafields.theme.label and product.metafields.theme.label != blank
+    assign has_custom_label = true
+    assign custom_label = product.metafields.theme.label.value
+  elsif product_tags contains '_label_'
+    for tag in product.tags
+      if tag contains '_label_'
+        assign tag_starts_with = tag | slice: 0
+        if tag_starts_with == '_'
+          assign has_custom_label = true
+          assign custom_label = tag | replace: '_label_', ''
+        endif
+      endif
+    endfor
+  endif
+-%}
+
+  {%- if settings.enable_swatches -%}
+    {%- liquid
+      assign swatch_trigger = 'products.general.color_swatch_trigger' | t | downcase
+      assign swatch_file_extension = 'png'
+      assign color_count = 0
+     
+    -%}
+{% assign totalproducts = 0 %}
+
+    {%- for option in product.options_with_values -%}
+      {%- liquid
+        assign option_name = option.name | downcase
+        assign is_color = false
+        if option_name contains swatch_trigger
+          assign is_color = true
+        elsif swatch_trigger == 'color' and option_name contains 'colour'
+          assign is_color = true
+        endif
+            
+        
+      -%}
+
+
+      {%- if is_color  -%}
+        {%- assign option_index = forloop.index0 -%}
+        {%- assign values = '' -%}
+       	{%assign MultiSizes = '' %}
+        {%assign MultiSizes = '' %}
+                
+        {%- for variant in product.variants -%}
+          {%- unless MultiSizes contains variant.options[2] -%}
+            {% assign MultiSizes = variant.options[2] | append: ',' | append: MultiSizes %}          
+          {%-endunless-%}
+            
+        {%-endfor-%}
+
+
+        {%- for variant in product.variants -%}
+
+          {% assign Materiale = variant.options[0] | downcase | handelize %}
+          {%- assign color_value = variant.options[option_index]   %}
+          {% capture value %}{{ color_value }}-{{ Materiale }}{% endcapture %}
+          
+          {%- unless values contains value -%}            
+            {%- liquid
+              assign values = values | join: ',' | append: ',' | append: value | split: ','
+
+              assign color_file_name = value | handle | append: '.' | append: swatch_file_extension
+              assign color_image = color_file_name | file_img_url: '50x50' | prepend: 'https:' | split: '?' | first
+              assign color_swatch_fallback = value | split: ' ' | last | handle
+              assign color_count = color_count | plus: 1
+            -%}
+            {% assign cstm_variants =  variant.title | split: "/" %}
+
+            {%assign styleVariant = '' %}
+
+            {% assign filterCol = cstm_variants[1] | handleize | replace :'-','' | replace :' ','' %}
+            {%assign filterMat = cstm_variants[0] | split:'(' | first | handleize | replace :'-','' | replace :' ','' %}
+            {%assign filterSize = cstm_variants[2] | handleize | replace :'-','' | replace :' ','' %}
+            {%assign filterHeel = product.metafields.my_fields.heal %}
+
+            {%assign allSiz = MultiSizes | split :',' %}
+
+            {%- if filterColors != blank -%}
+              {%assign testVab = 0 %}
+              {% for allSize in allSiz %}
+                {%- if filterColors contains allSize -%}
+                  {% assign testVab = 1 %}
+                {%- endif -%}
+              {% endfor %}
+              {%- if filterColors contains filterCol or filterColors contains filterHeel or filterColors contains filterMat or filterColors contains filterSize or testVab == 1 -%}
+                {%- assign styleVariant = 'style="display:inline";' -%}
+                {%- assign totalproducts = totalproducts | plus : 1 -%}
+              {%- else -%}
+                {%- assign styleVariant = 'style="display:none";' -%}
+              {%- endif -%}
+            {%- else -%}
+              {%- assign styleVariant = 'style="display:inline";' -%}
+              {%- assign totalproducts = totalproducts | plus : 1 -%}
+            {%- endif -%}
+            {%- if enable_sold == false -%}
+              {% assign flag = 0 %}
+              {% for variants2 in product.variants %}
+                {% if variants2.title contains cstm_variants[1] %}
+                  {% if variants2.inventory_quantity >0 %}
+                    {% assign flag = 1 %}
+                  {% endif %}
+                {% endif %}
+              {% endfor %}
+
+              {% if flag == 0 %}
+                {%- assign styleVariant = 'style="display:none";' -%}
+              {% endif %}
+            {%- endif -%}
+            
+            <div class="{{ cstm_variants[1] | handleize }} {{filterHeel}} {{ cstm_variants[0]  | handleize | replace : '-','' }}  {{ cstm_variants[2]  | handleize | replace : '-','' }} grid__item grid-product {{ grid_item_width }}{% if quick_shop_enable %} grid-product__has-quick-shop{% endif %}" data-aos="row-of-{{ per_row }}" data-product-handle="{{ product.handle }}" data-product-id="{{ variant.id }}" {{styleVariant}}>
+          
+          
+          
+            <a
+              href="{{ variant.url | within: collection }}"
+              {% if variant.image %}
+                data-variant-id="{{ variant.id }}"
+                data-variant-image="{{ variant.image | img_url: '400x' }}"
+              {% endif %}
+              >
+
+              <div class="prd_img g2g-notify-badge-item">
+                
+                <!-- sconto originale -->            
+                {%- if settings.product_save_amount -%}
+                  <div class="badges">
+                    {% assign flag_1 = 0 %}
+                    {%- if on_sale -%}
+                
+                      {%- if settings.product_save_type == 'dollar' -%}
+                        {%- capture variant_saved_amount -%}{{ variant.compare_at_price | minus: variant.price | money }}{%- endcapture -%}
+                        {%- capture variant_saved_amount_only -%}{{ variant.compare_at_price | minus: variant.price | money_without_currency | replace : ",",""  }}{%- endcapture -%}
+                      {%- else -%}
+                        {%- capture variant_saved_amount -%}{{ variant.compare_at_price | minus: variant.price | times: 100.0 | divided_by: variant.compare_at_price | round }}%{%- endcapture -%}
+                        {%- capture variant_saved_amount_only -%}{{ variant.compare_at_price | minus: variant.price | times: 100.0 | divided_by: variant.compare_at_price | round | money_without_currency | replace : ",",""  }}%{%- endcapture -%}
+                      {%- endif -%}
+
+                      <!-- badge -->
+                      <style>
+                                /* G2G */
+                        .g2g-notify-badge-item {
+                          position:relative;
+                          padding-top:0px;
+                          display:inline-block;
+                        }
+                        .g2g-notify-badge{
+                            background:black;
+                            text-align: center;
+                            border-radius: 180px;
+                            color:white;
+                            padding:5px 10px;
+                            font-size:14px;
+                          font-weight:600;
+                          height: 100%;
+                        }
+
+                        @media only screen and (max-width: 1009px){
+                          .g2g-notify-badge {
+                            font-size: 12px;
+                          }
+                        }
+
+                        @media only screen and (max-width:768px){
+                          .g2g-notify-badge {
+                            padding: 5px 8px;
+                            font-size: 10px;
+                          }
+                        }
+                        @media only screen and (max-width:359px){
+                          .g2g-notify-badge {
+                            padding: 5px;
+                          }
+                        }
+
+                        .variant-limited {
+                          color: #AF5E57;
+                        }
+
+                        @media only screen and (max-width: 768px) {
+                          .variant-limited {
+                            padding: 0 35px;
+                          }
+                        }
+
+                        @media only screen and (max-width: 410px) {
+                          .variant-limited {
+                            padding: 0 17px;
+                          }
+                        }
+
+                        .template-collection .collection-grid__wrapper .grid__item {
+                          position: relative;
+                        }
+
+                        .badges {
+                          display: flex;
+                          flex-wrap: wrap;
+                          position: absolute;
+                          top: 10px;
+                          left: 10px;
+                        }
+
+                        span.cstm_soldout {
+                          margin-right: 10px;
+                          display: inline;
+                          background-color: #577caf;
+                          text-align: center;
+                          border-radius: 180px;
+                          color: white;
+                          padding: 5px 10px;
+                          font-size: 14px;
+                          font-weight: 600;
+                          opacity: 1;
+                          order: -1;
+                          margin-bottom: 5px;
+                        }
+
+                        @media only screen and (max-width: 1009px){
+                          span.cstm_soldout {
+                            font-size: 12px;
+                          }
+                        }
+
+                        @media only screen and (max-width:768px){
+                          span.cstm_soldout {
+                            padding: 5px 8px;
+                            font-size: 10px;
+                          }
+                        }
+
+                        @media only screen and (max-width: 359px){
+                          span.cstm_soldout {
+                            padding: 5px;
+                          }
+                        }
+                      </style> 
+
+                      {% if variant_saved_amount_only > '0' %}  
+                        {% if variant.compare_at_price != blank and variant.compare_at_price >0 %}
+                          <span class="grid-product__price--savings g2g-notify-badge">
+                          {% assign  discount_price = variant.compare_at_price | minus: variant.price | times: 100.0 | divided_by: variant.compare_at_price %}
+                            {{ 'products.general.save_html' | t: saved_amount: variant_saved_amount  }}
+                        
+                            {%comment%}{{discount_price |divided_by:100 | times:variant.compare_at_price | divided_by:100 | money }}{%endcomment%}
+                          </span>
+                        {% endif %}
+                      {% endif %} 
+
+                      {% for variants3 in product.variants %}
+                        {% if variants3.title contains cstm_variants[1] %}               
+                          {% if variants3.inventory_quantity > 0 %}
+                            {% if variants3.title contains cstm_variants[0] %}
+                              {% assign flag_1 = 1 %}
+                            {% endif %}                  
+                          {% endif %}                
+                        {% endif %}
+                      {% endfor %}
+                    
+                    {% if flag_1 == 0 %}
+                        <span class="cstm_soldout one">{{ settings.badge_text }}</span>               
+                    {% endif %}
+                                
+
+                    {%- else -%}
+                      {% for variants3 in product.variants %}
+                        {% if variants3.title contains cstm_variants[1] %}               
+                          {% if variants3.inventory_quantity > 0 %}
+                            {% if variants3.title contains cstm_variants[0] %}
+                              {% assign flag_1 = 1 %}
+                            {% endif %}                  
+                          {% endif %}                
+                        {% endif %}
+                      {% endfor %}
+                      
+                      {% if flag_1 == 0 %}
+                          <span class="cstm_soldout one">{{ settings.badge_text }}</span>               
+                      {% endif %}
+                    {%- endif -%}
+                  </div>
+                                              <!-- badge -->
+                {%- endif -%}
+
+                  
+                  {%comment%}
+
+                  {%- if on_sale -%}
+                  {%- if settings.product_save_amount -%}
+                  {%- if settings.product_save_type == 'dollar' -%}
+                  {%- capture saved_amount -%}{{ product.compare_at_price | minus: product.price | money }}{%- endcapture -%}
+                  {%- else -%}
+                  {%- capture saved_amount -%}{{ product.compare_at_price | minus: product.price | times: 100.0 | divided_by: product.compare_at_price | round }}%{%- endcapture -%}
+                  {%- endif -%}
+                  <span class="grid-product__price--savings">
+                    {{ 'products.general.save_html' | t: saved_amount: saved_amount }}
+                  </span>
+                  {%- endif -%}
+                  {%- endif -%}
+                  {%endcomment%}
+  
+                          <!-- sconto originale -->    
+                
+                
+                    {% if variant.image !=blank %}
+                <img src="{{ variant.image | img_url: '400x' }}">
+                {% else %}
+                <img src="{{'placeholder_image.jpg' | asset_img_url : 'master'}}">
+                {% endif %}
+             </div>
+              <span class="cstm_pdtitle"><span class="cstm_prdname">{{ product.title }}</span>
+                
+                <span class="cstm_color">{{ cstm_variants[1] }}</span>
+                </span>
+                <span class="cstm_material">{{ cstm_variants[0] | split :'(' | first}}</span>
+
+              <span class="custom_price ">
+              {% assign compare_price = variant.compare_at_price %}
+            {% assign product_price = variant.price %}
+            {% if product.compare_at_price_max > variant.price %}
+            
+              <span class="normal_price">{{ variant.price | money}}</span>
+                    <span class="prices cmp_price">{{ variant.compare_at_price | money }}</span>
+              {%else%}
+              <!-- g2g it was product.price, changed in variant.price -->
+                <span class="prices"> {{ variant.price | money_without_trailing_zeros }} </span> 
+            
+            {% endif %}</span>
+            
+            
+                <!-- ero qui -->     
+            
+
+              {% assign variants_list = '' %}
+              {% assign variants_list_sum = 0 %}
+
+              {% for variants2 in product.variants %}
+                {% if variants2.title contains cstm_variants[1] %}               
+                  {% if variants2.title contains cstm_variants[0] %}                  
+                    {% assign variants_list = variants_list | append: variants2.inventory_quantity %}
+                    {% assign variants_list_sum = variants_list_sum | plus: variants2.inventory_quantity %}
+                  {% endif %}                
+                {% endif %}
+              {% endfor %}
+
+              {% assign variants_list_sum = variants_list_sum | divided_by: 1.0 %}
+              {% assign variants_list_sum_average = variants_list_sum | divided_by: variants_list.size | divided_by: 1.0 %}
+              {%- if variants_list_sum_average != 0 and variants_list_sum_average < 1 -%}
+                <span class="variant-limited">{{ 'products.product.last_items' | t }}</span>
+              {%- endif -%}
+              
+    
+              
+
+                {% comment %} {% assign variants_quantity = 0 %}
+                {% for variant in product.variants %}
+                  {% comment %} {% assign new_variant_quantity = variant_quantity | plus variant.inventory_quantity  %} {% endcomment %}
+                  <p>{{ variant.inventory_quantity }}</p>
+                {% endfor %} {% endcomment %}
+              </a>
+                {% comment %}<span data-score='{{ shop.metafields.judgeme.all_reviews_rating | round: 1 }}/5' class='jdgm-all-reviews-rating'></span>{%comment%}{{ shop.metafields.judgeme.all_reviews_rating | round: 1 }}/5{%endcomment%} {% endcomment%}   
+                {% comment %}Start automatically added Judge.me widget{% endcomment %}
+
+                        {% comment %}Start automatically added Judge.me widget{% endcomment %}
+                  <!-- CARMENS {% render 'judgeme_widgets', widget_type: 'judgeme_preview_badge', concierge_install: true, product: product %} -->
+                {% comment %}End automatically added Judge.me widget{% endcomment %} 
+            </div>
+          {%- endunless -%}
+        {%- endfor -%}
+       
+        {%- if color_count < 2 -%}
+          {%- style -%}
+            .grid-product__colors--{{ product.id }} {
+              display: none;
+            }
+          {%- endstyle -%}
+        {%- endif -%}
+      {%- endif -%}
+    {%- endfor -%}
+  {%- endif -%}
+<span class="totalProducts" style="display:none;" data-count="{{totalproducts}}"></span>
+  
+
+  {%- if quick_shop_enable -%}
+    {%- render 'quick-shop-modal', product: product -%}
+  {%- endif -%}

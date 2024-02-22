@@ -1,0 +1,110 @@
+<div class="cstm_productsection">
+  <div class="page-width">
+    <div class="section-header">
+     {% if section.settings.bestseller_heading !=blank %}
+      <h2 class="section-header__title">{{ section.settings.bestseller_heading  }}</h2>
+      {% endif %}
+    </div>
+ 
+ 
+    
+
+    
+    <div class="sq_prd_slider">
+      {% assign products = section.settings.bestsellr_coll %}
+     
+      {% if products !=blank %}  
+      <div class="custom-slider">
+        {% for product in collections[products].products %}
+        <div class="inner_sq_slides">
+          <a href="{{ product.url }}">
+            <div class="cstm_inrsecimg">
+              {%- assign current_variant_image = product.selected_or_first_available_variant.featured_image | default: product.featured_image -%}
+ <div class="image-padding">
+            
+      <img src="{{ current_variant_image |img_url:"medium" }}">
+   </div>
+        
+              {%comment%}
+           	{% if product.featured_image !=blank %} 
+             <div class="image-padding">
+              <img src="{{ product.featured_image |img_url:"medium" }}">
+              </div>
+              {% endif %}
+              {%endcomment%}
+              <span class="cstmprice desktop custom_price">
+
+              
+                {%- if product.first_available_variant -%}
+        {%- assign price = product.first_available_variant.price -%}
+        {% assign comparePrice = product.first_available_variant.compare_at_price %}
+                <span class="prices cmp_price">{{ comparePrice |money }}</span>
+                <span class="normal_price">{{ price | money }}</span>
+                
+    {%- else -%}
+        {%- assign price = product.price -%}
+                <span class="prices"> {{ price | money_without_trailing_zeros }} </span>
+    {%- endif -%}
+   
+             
+                
+                
+              
+               </span>
+
+            </div>
+            <div class="cstm_product_heading"><p>{{ product.title | escape  }}</p>
+             <span class="cstmprice mobile custom_price">
+                
+                        {%- if product.first_available_variant -%}
+        {%- assign price = product.first_available_variant.price -%}
+        {% assign comparePrice = product.first_available_variant.compare_at_price %}
+                <span class="prices cmp_price">{{ comparePrice |money }}</span>
+                <span class="normal_price">{{ price | money }}</span>
+                
+    {%- else -%}
+        {%- assign price = product.price -%}
+                <span class="prices"> {{ price | money_without_trailing_zeros }} </span>
+    {%- endif -%}         
+               </span>
+            </div>
+          </a>
+        </div>
+        {% endfor %}
+      {% endif %}
+      
+    </div>
+    </div>
+  </div>
+</div>
+{% schema %}
+  {
+    "name": "Best Seller",
+     "class":"cstm_bestseller index-section",
+    "settings": [
+
+      {
+      "type":"text",
+      "id":"bestseller_heading",
+      "label":"Heading"
+      },
+      {
+      "type":"collection",
+      "id":"bestsellr_coll",
+      "label":"Collection"
+      }
+
+],
+"presets": [
+{
+"name": "Best Seller Products"
+}
+]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
